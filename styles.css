@@ -1,0 +1,233 @@
+body {
+      background-color: black;
+      font-family: "Press Start 2P", monospace;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .coin-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+    }
+
+    .coin {
+      width: 100px;
+      height: 100px;
+      background-image: url('coin.png');
+      background-size: cover;
+      cursor: pointer;
+      margin-top: 250px;
+    }
+
+    .balance {
+      font-size: 100px;
+      font-weight: bold;
+    }
+
+    .energy-container {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .energy-bar {
+      width: 300px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      margin-right: 10px;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+    }
+
+    .energy-fill {
+      height: 100%;
+      background-color: white;
+      border-radius: 10px;
+      transition: width 0.2s ease-in-out;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .boost-button, .bonus-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 60px;
+      background-color: #ffffff;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
+    }
+
+    .boost-button:active, .bonus-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .boost-button:hover, .bonus-button:hover {
+      background-color: #f2f2f2;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .boost-button img, .bonus-button img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .upgrade-menu {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .upgrade-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      text-align: center;
+      transform: scale(0);
+      animation: scaleIn 0.3s ease-in-out forwards;
+    }
+
+    .upgrade-content h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .upgrade-content button {
+      width: 80%;
+      max-width: 300px;
+      height: 60px;
+      background-color: #000000;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
+    }
+
+    .upgrade-content button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .upgrade-content button:hover {
+      background-color: #333333;
+    }
+
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .notification.show {
+      opacity: 1;
+    }
+
+    .notification.hide {
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .coin {
+        margin-top: 100px;
+      }
+
+      .balance {
+        font-size: 27px;
+      }
+
+      .energy-bar {
+        width: 200px;
+      }
+
+      .button-container {
+        flex-direction: row;
+        gap: 10px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .boost-button, .bonus-button {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 25px;
+      }
+
+      .boost-button img, .bonus-button img {
+        height: 30px;
+        margin-right: 8px;
+      }
+
+      .upgrade-content h2 {
+        font-size: 20px;
+      }
+
+      .upgrade-content button {
+        height: 50px;
+        font-size: 16px;
+      }
+    }
