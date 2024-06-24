@@ -6,73 +6,100 @@ body {
       padding: 0;
     }
 
-    .coin-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 80px;
-    }
+   .coin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: #000000;
+}
 
-    .coin {
-      width: 100px;
-      height: 100px;
-      background-image: url('coin.png');
-      background-size: cover;
-      cursor: pointer;
-      margin-top: 250px;
-    }
+.balance {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
 
-    .balance {
-      font-size: 100px;
-      font-weight: bold;
-    }
+.coin {
+  width: 100px;
+  height: 100px;
+  background-image: url('coin.png');
+  background-size: contain;
+  cursor: pointer;
+}
 
-    .energy-container {
-      display: flex;
-      align-items: center;
-      margin-top: 30px;
-    }
+.energy-container {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
 
-    .energy-bar {
-      width: 300px;
-      height: 20px;
-      background-color: #333;
-      border-radius: 10px;
-      margin-right: 10px;
-      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
-    }
+.energy-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-right: 10px;
+}
 
-    .energy-fill {
-      height: 100%;
-      background-color: white;
-      border-radius: 10px;
-      transition: width 0.2s ease-in-out;
-    }
+.energy-fill {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 100px;
+}
 
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+.energy-info {
+  font-size: 11px;
+  margin-left: 10px;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+.energy-info img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 50px;
+}
+
+.boost-button, .bonus-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.boost-button img, .bonus-button img {
+  width: 30px;
+  height: 40px;
+  margin-right: 10px;
+}
 
     .boost-button, .bonus-button {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 200px;
-      height: 60px;
+      height: 100px;
       background-color: #ffffff;
       color: #333;
       font-size: 20px;
       font-weight: bold;
       border: none;
-      cursor: pointer;
-      border-radius: 30px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;  
+      border-radius: 140px;
+      box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
     }
 
@@ -229,5 +256,311 @@ body {
       .upgrade-content button {
         height: 50px;
         font-size: 16px;
-      }
+      }      
+
+body {
+            background-color: black;
+            font-family: "Press Start 2P", monospace;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* чтобы звезды не создавали горизонтальный скролл */
+        }
+
+        /* Звезды */
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+        }
+
+        .star1 {
+            animation: twinkle1 2s infinite;
+        }
+
+        .star2 {
+            animation: twinkle2 3s infinite;
+        }
+
+        .star3 {
+            animation: twinkle3 2.5s
+        }
+
+        .star4 {
+            animation: twinkle4 3.5s
+            }
+
+        .star5 {
+            animation: twinkle5 3s infinite;
+        }
+
+        .star6 {
+            animation: twinkle6 4.5s
+        }
+
+        .star7 {
+            animation: twinkle7 1.5s infinite;
+             }
+
+        .star8 {
+            animation: twinkle8 1.2s infinite;
+        }
+
+        .star9 {
+            animation: twinkle9 2.2s infinite;
+        }
+
+        .star10 {
+            animation: twinkle10 4.3s
+        }
+
+        .star11 {
+            animation: twinkle11 3.1s
+            }
+
+        .star12 {
+            animation: twinkle12 5.2s infinite;
+        }
+
+        .star13 {
+            animation: twinkle13 4.5s
+        }
+
+        .star14 {
+            animation: twinkle14 1.5s infinite;
+        }
+        .star15 {
+            animation: twinkle15 3.5s infinite;
+            }
+
+        .star16 {
+            animation: twinkle16 4.3s infinite;
+        }
+
+        .star17 {
+            animation: twinkle17 4.4s infinite;
+        }
+
+        .star18 {
+            animation: twinkle18 1.5s
+        }
+
+        .star18 {
+            animation: twinkle18 2.9s
+            }
+
+        .star19 {
+            animation: twinkle19 5s infinite;
+        }
+
+        .star20 {
+            animation: twinkle20 2.5s
+        }
+
+        .star21 {
+            animation: twinkle21 4.5s infinite;
+             }
+
+        .star22 {
+            animation: twinkle22 2.2s infinite;
+        }
+
+        .star23 {
+            animation: twinkle23 2.2s infinite;
+        }
+
+        .star24 {
+            animation: twinkle24 4.3s
+        }
+
+        .star25 {
+            animation: twinkle25 3.1s
+            }
+
+        .star26 {
+            animation: twinkle26 5.2s infinite;
+        }
+
+        .star27 {
+            animation: twinkle27 2.5s
+        }
+
+        .star28 {
+            animation: twinkle28 3.5s infinite;
+        }
+        .star29 {
+            animation: twinkle29 3.3s infinite;
+        }
+
+        .star30 {
+            animation: twinkle30 2.5s infinite;
+        }
+
+        @keyframes twinkle1 {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes twinkle2 {
+            0%, 100% {
+                opacity: 0;
+            }
+            25%, 75% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes twinkle3 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle4 {
+            0%, 100% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle5 {
+            0%, 100% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle6 {
+            0%, 100% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle7 {
+            0%, 100% {
+                opacity: 1;
+            }
+            57% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle8 {
+            0%, 100% {
+                opacity: 1;
+            }
+            98% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle9 {
+            0%, 100% {
+                opacity: 1;
+            }
+            76% {
+                opacity: 0;
+            }
+            @keyframes twinkle10 {
+    0%, 100% {
+        opacity: 1;
     }
+    ${getRandomPercentage()} {
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle11 {
+    0%, 100% {
+        opacity: 1;
+    }
+    ${getRandomPercentage()} {
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle12 {
+    0%, 100% {
+        opacity: 1;
+    }
+    ${getRandomPercentage()} {
+        opacity: 0;
+    }
+    }
+        @keyframes twinkle13 {
+            0%, 100% {
+                opacity: 1;
+            }
+            98% {
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle14 {
+            0%, 100% {
+                opacity: 1;
+            }
+            76% {
+                opacity: 0;
+            }
+            @keyframes twinkle15 {
+    0%, 100% {
+        opacity: 1;
+    }
+    ${getRandomPercentage()} {
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle16 {
+    0%, 100% {
+        opacity: 1;
+    }
+    ${getRandomPercentage()} {
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle17 {
+    0%, 100% {
+        opacity: 1;
+    }
+    ${getRandomPercentage()} {
+        opacity: 0;
+    }
+}
+
+/* Продолжайте аналогично до twinkle30 */
+
+/* Функция для получения случайного процентного значения от 20% до 180% */
+function getRandomPercentage() {
+    return Math.floor(Math.random() * 161) + 20 + '%';
+}
+.star {
+    position: absolute;
+}
+
+
+.star1 {
+            top: 50px;
+            left: 100px;
+        }
+
+        .star2 {
+            top: 150px;
+            left: 200px;
+        }
+
+        .star3 {
+            top: 250px;
+            left: 300px;
